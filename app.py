@@ -15,7 +15,7 @@ def ultimas_promocoes():
 
 menu = """
 <a href="/">Página inicial</a> |
-<a href="/promocoes"> Promoções |
+<a href="/promocoes"> Promoções</a> |
 <a href="/sobre">Sobre</a> |
 <a href="/contato">Contato</a>
 <br>
@@ -31,7 +31,13 @@ def sobre():
 
 @app.route("/contato")
 def contato():
-   return menu + "Você pode encontrar em contato comigo pelo @viniciusdmelo nas redes sociais"
+   return menu + """
+   Você pode encontrar em contato comigo pelo @viniciusdmelo nas redes sociais <br>
+   <a href="https://www.linkedin.com/in/viniciusdmelo/">LinkedIn</a> | 
+   <a href="https://www.facebook.com/viniciusdmelo">Facebook</a> | 
+   <a href="http://instagram.com/viniciusdmelo">Instagram</a> | 
+   <a href="https://twitter.com/viniciusdmelo">Twitter</a>
+   """
 
 @app.route("/promocoes")
 def promocoes():
