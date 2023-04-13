@@ -78,6 +78,11 @@ def dedoduro():
   resposta = requests.post(f"https://api.telegram.org./bot{TELEGRAM_API_KEY}/sendMessage", data=mensagem)
   return f"Mensagem enviada. \n\nResposta: ({resposta.status_code}) - {resposta.text}"
 
+@app.route("/dedodurogoogle")
+def dedoduro2():
+  sheet.append_row(["Vinicius de Melo", "a partir do Flask via GitHub e Render"])
+  return "Planilha escrita!"
+
 @app.route("/telegram-bot", methods=["POST"])
 def telegram_bot():
   update = request.json
