@@ -1,10 +1,6 @@
 flask
 gunicorn
 tchan
-update
-bs4
-pandas
-datetime
 requests
 gspread
 oauth2client
