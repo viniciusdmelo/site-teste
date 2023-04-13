@@ -3,6 +3,7 @@ import os
 import gspread
 import requests
 from flask import Flask, request
+from tchan import ChannelScraper
 from oauth2client.service_account import ServiceAccountCredentials
 
 TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
