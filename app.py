@@ -76,7 +76,11 @@ def promocoes():
 def dedoduro():
   mensagem = {"chat_id": TELEGRAM_ADMIN_ID, "text": "Alguém acessou a página dedo duro!"}
   resposta = requests.post(f"https://api.telegram.org./bot{TELEGRAM_API_KEY}/sendMessage", data=mensagem)
-  return f"Mensagem enviada. \n\nResposta: ({resposta.status_code}) - {resposta.text}"
+  return f"""
+  Mensagem enviada. \n\n
+  Resposta: ({resposta.status_code}) - {resposta.text}\n\n\n
+  Deseja escrever o seu acesso na planilha do Google? <a href="/dedodurogoogle">Clique aqui</a>.
+  """
 
 @app.route("/dedodurogoogle")
 def dedoduro2():
