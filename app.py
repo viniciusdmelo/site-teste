@@ -35,7 +35,7 @@ menu = """
 <a href="/promocoes"> Promoções</a> |
 <a href="/sobre">Sobre</a> |
 <a href="/contato">Contato</a> |
-<a href="/dedoduro">Dedo duro</a<
+<a href="/dedoduro">Dedo duro</a>
 <br>
 <br>
 """
