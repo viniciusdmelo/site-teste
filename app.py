@@ -8,10 +8,13 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
 TELEGRAM_ADMIN_ID = os.environ["TELEGRAM_ADMIN_ID"]
-GOOGLE_SHEETS_CREDENTIALS = os.environ["GOOGLE_SHEETS_CREDENTIALS"]
-with open("credenciais.json", mode="w") as arquivo:
-  arquivo.write(GOOGLE_SHEETS_CREDENTIALS)
-conta = ServiceAccountCredentials.from_json_keyfile_name("credenciais.json")
+GOOGLE_SHEETS_CREDENTIALS = os.environ["GOOGLE_SHEETS_CREDENTIALS"] #API GOOGLE SHEETS
+
+arquivo = open("credenciais.json", mode="w") #RECRIAR ARQUIVO DA API
+arquivo.write(GOOGLE_SHEETS_CREDENTIALS)
+arquivo.close()
+
+conta = ServiceAccountCredentials.from_json_keyfile_name("credenciais.json") #AUTORIZAR USO DA API
 api = gspread.authorize(conta)
 planilha = api.open_by_key("1zI16LZUgnR-1Xr3MqsjdV6wtyYNMiPpVuxdUVoXYuA4")
 sheet = planilha.worksheet("Resultados")
